@@ -1,0 +1,13 @@
+<h1>My How-To-Lists</h1>
+
+  <p>
+    <% @list.each do |l| %>
+      <%= l.title %><br />
+      <%= link_to 'Show', list_path(l) %>
+      <%= link_to 'Edit', edit_list_path(l) %>
+      <%= link_to 'Destroy', list_path(l),
+          method: :delete, data: { confirm: 'Are you sure?'}
+          %>
+</p>
+
+      <% end %>

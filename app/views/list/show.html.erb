@@ -1,0 +1,32 @@
+<p>
+  <strong>List Title:</strong>
+ <p> <%= @list.title %></p>
+
+<h2>Items</h2>
+<% @list.item.each do |i| %>
+  <p>
+    <strong>Items:</strong>
+    <%= i.item %>
+  </p>
+<% end %>
+
+<h2>Add an item:</h2>
+<%= form_for([@list, @list.item.build]) do |f| %>
+  <p>
+    <%= f.label :item %><br />
+  </p>
+  <p>
+    <%= f.text_area :item %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+ <p><%= link_to 'Back', list_path %>
+     | <%= link_to 'Edit', edit_list_path(@list) %>
+
+</p>
+
+
+
