@@ -1,4 +1,6 @@
 class ListController < ApplicationController
+    before_action :set_list, only: [:show, :edit, :update, :destroy]
+
   def index
     @list = List.all
   end
@@ -40,6 +42,13 @@ def update
 
   redirect_to list_index_path
 end
+
+
+  private
+
+    def set_list
+    @list = List.find(params[:id])
+  end
 
   private
     def list_params

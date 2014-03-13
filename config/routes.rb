@@ -1,6 +1,6 @@
 HowTo::Application.routes.draw do
       resources :list do
-    resources :item
+    resources :items
   end
   get "list/index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -8,7 +8,7 @@ HowTo::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-
+  get 'items/id' => 'items#edit'
    root 'list#index'
 
   # Example of regular route:
