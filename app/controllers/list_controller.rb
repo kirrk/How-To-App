@@ -19,9 +19,9 @@ class ListController < ApplicationController
   end
    end
 
-def edit
-    @list = List.find(params[:id])
-end
+   def show
+   end
+
 
 def update
     @list = List.find(params[:id])
@@ -32,9 +32,7 @@ def update
     end
   end
 
-  def show
-    @list = List.find(params[:id])
-  end
+
 
   def destroy
     @list = List.find(params[:id])
