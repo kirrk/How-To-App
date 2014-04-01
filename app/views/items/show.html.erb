@@ -1,0 +1,7 @@
+<h2>Items:</h2>
+<% @list.items.each do |i| %>
+  <p>
+    <%= i.item %>
+  </p>
+<% end %>
+<%= link_to 'Back to Items', list_index_path %>

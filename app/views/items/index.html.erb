@@ -1,0 +1,12 @@
+<h1>My Items</h1>
+
+  <p>
+    <% @list.items.each do |item| %>
+      <%= item.item %><br />
+      <%= link_to 'Show', list_items_path %>
+      <%= link_to 'Edit Item', [:edit, @list, item] %>
+      <%= link_to 'Destroy', [@list, item],
+          method: :delete, data: { confirm: 'Are you sure?'}
+          %>
+  </p>
+      <% end %>

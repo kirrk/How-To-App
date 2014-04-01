@@ -1,0 +1,9 @@
+
+<h4>Items</h4>
+<%= items.item %> <br />
+
+<% link_to 'Delete list item', [item.list, item],
+                  method: :delete,
+                  data: { confirm: 'Are you sure' }
+
+                  %>

@@ -1,0 +1,11 @@
+  <%= form_for ([@list, @list.items.build]) do |f| %>
+
+  <p>
+    <%= f.label :item %><br />
+    <%= f.text_field :item %>
+  </p>
+
+    <p>
+    <%= f.submit %>
+  </p>
+<% end %>
