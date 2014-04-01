@@ -8,13 +8,19 @@
     <%= i.item %>
   </p>
 
+
+     | <%= link_to 'Change item', [:edit, @list, i] %> |
+      <%= link_to 'Destroy', [@list, i],
+          method: :delete, data: { confirm: 'Are you sure?'}
+          %>
+
 <% end %>
 
 
 
 
 <h2>Add an Item</h2>
-<%= render "item/form" %>
+<%= render "items/form" %>
 
 
  <p><%= link_to 'Back', list_path %>

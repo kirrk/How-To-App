@@ -5,6 +5,10 @@ class ListController < ApplicationController
     @list = List.all
   end
 
+   def show
+    @list = List.new
+   end
+
   def new
     @list = List.new
   end
@@ -15,12 +19,11 @@ class ListController < ApplicationController
    if  @list.save
     redirect_to @list
   else
-    render 'new'
+    render action: 'new'
   end
    end
 
-   def show
-   end
+
 
 
 def update
