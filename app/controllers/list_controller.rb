@@ -6,7 +6,6 @@ class ListController < ApplicationController
   end
 
    def show
-    @list = List.new
    end
 
   def new
